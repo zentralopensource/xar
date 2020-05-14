@@ -222,7 +222,6 @@ xar_t xar_open(const char *file, int32_t flags) {
 		XAR(ret)->fd = XAR(ret)->heap_fd = -2;
 		return ret;
 	}
-	OpenSSL_add_all_digests();
 	if( flags ) {
 		char *tmp1, *tmp2, *tmp3, *tmp4;
 		tmp1 = tmp2 = strdup(file);

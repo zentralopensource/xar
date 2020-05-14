@@ -46,7 +46,6 @@ void heap_check(int fd, const char *name, const char *prop, off_t offset, off_t 
 		exit(1);
 	}
 	fprintf(stderr, "Heap checking %s %s at offset: %" PRIu64 "\n", name, prop, HeapOff+offset);
-	OpenSSL_add_all_digests();
 	md = EVP_get_digestbyname("md5");
 	if( md == NULL ) {
 		fprintf(stderr, "No md5 digest in openssl\n");

@@ -113,7 +113,6 @@ int32_t xar_hash_unarchived_out(xar_t x, xar_file_t f, xar_prop_t p, void *in, s
 	
 	if(!CONTEXT(context)){
 		*context = context_create();
-		OpenSSL_add_all_digests();
 	}
 	
 	if( !CONTEXT(context)->unarchived ){
@@ -154,7 +153,6 @@ int32_t xar_hash_archived_in(xar_t x, xar_file_t f, xar_prop_t p, void *in, size
 		
 	if(!CONTEXT(context)){
 		*context = context_create();
-		OpenSSL_add_all_digests();
 	}
 	
 	if ( !CONTEXT(context)->archived ){
