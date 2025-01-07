@@ -170,6 +170,14 @@ esac
 AC_SUBST([abi])
 AC_SUBST([RPATH])
 
+dnl Add signed-char flag when on aarch64
+case "${host}" in
+  aarch64-*)
+        CFLAGS="$CFLAGS -fsigned-char"
+        CPPFLAGS="$CPPFLAGS -fsigned-char"
+        ;;
+esac
+
 dnl Disable rules that do automatic regeneration of configure output by default.
 AC_ARG_ENABLE([autogen],
               [  --enable-autogen        Automatically regenerate configure output],
