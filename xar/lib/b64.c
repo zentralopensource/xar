@@ -31,6 +31,7 @@
  * DRI: Rob Braun <bbraun@synack.net>
  */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
